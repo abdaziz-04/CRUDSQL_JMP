@@ -59,8 +59,6 @@ public class TampilActivity extends AppCompatActivity {
                 startActivity(intent);
 
                 TampilActivity.this.finish();
-
-
             }
         });
 
