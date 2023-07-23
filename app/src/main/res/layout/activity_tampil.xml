@@ -5,7 +5,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".TampilActivity">
+    tools:context=".TampilActivity"
+    android:background="@color/putihabu"
+    >
 
     <TextView
         android:layout_width="match_parent"

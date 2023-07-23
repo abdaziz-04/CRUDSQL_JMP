@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    tools:context=".TambahActivity">
+    tools:context=".TambahActivity"
+    android:background="@color/putihabu">
 
     <EditText
         android:id="@+id/ed_nama"
