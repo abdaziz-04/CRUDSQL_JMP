@@ -11,23 +11,29 @@
     <EditText
         android:id="@+id/ed_nama"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Nama Barang" />
+        android:layout_height="30dp"
+        android:background="@drawable/et_style"
+        android:hint="Nama Barang"
+        android:paddingStart="8dp" />
 
     <EditText
         android:id="@+id/ed_merk"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_marginTop="10dp"
-        android:hint="Merk Barang" />
+        android:background="@drawable/et_style"
+        android:hint="Merk Barang"
+        android:paddingStart="8dp" />
 
     <EditText
         android:id="@+id/ed_harga"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/et_style"
         android:hint="Harga Barang"
-        android:inputType="number" />
+        android:inputType="number"
+        android:paddingStart="8dp" />
 
     <Button
         android:id="@+id/btn_submit"
