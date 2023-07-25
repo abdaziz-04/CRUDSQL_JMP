@@ -19,22 +19,16 @@ public class MainActivity extends AppCompatActivity {
 
         btnTambah = findViewById(R.id.btnTambah);
         btnTampil = findViewById(R.id.btnTampil);
-        btnTambah.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, TambahActivity.class);
-                startActivity(i);
+        btnTambah.setOnClickListener(view -> {
+            Intent i = new Intent(MainActivity.this, TambahActivity.class);
+            startActivity(i);
 
-            }
         });
 
-        btnTampil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        btnTampil.setOnClickListener(view -> {
 
-                Intent i = new Intent(MainActivity.this, TampilActivity.class);
-                startActivity(i);
-            }
+            Intent i = new Intent(MainActivity.this, TampilActivity.class);
+            startActivity(i);
         });
     }
 }

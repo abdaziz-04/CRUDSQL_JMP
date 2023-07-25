@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.pens.crudsql_jmp.db.DBSource;
 import com.pens.crudsql_jmp.model.Barang;
 
-
 public class TambahActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button btnSubmit;
@@ -20,7 +19,6 @@ public class TambahActivity extends AppCompatActivity implements View.OnClickLis
     EditText edNama, edHarga, edMerk;
 
     DBSource dbSource;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

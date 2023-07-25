@@ -21,7 +21,6 @@ public class UbahActivity extends AppCompatActivity {
 
     DBSource dbSource;
 
-    Barang barang;
 
     long id;
 
@@ -80,9 +79,6 @@ public class UbahActivity extends AppCompatActivity {
         startActivity(i);
 
         UbahActivity.this.finish();
-
-
-
     }
 
     @Override
