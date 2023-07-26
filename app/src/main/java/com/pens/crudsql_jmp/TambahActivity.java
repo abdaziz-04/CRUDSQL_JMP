@@ -70,7 +70,7 @@ public class TambahActivity extends AppCompatActivity implements View.OnClickLis
             merk = edMerk.getText().toString().trim();
 
             if (view.getId() == R.id.btn_submit) {
-                barang = dbSource.createBarang(nama, merk, harga);
+                dbSource.createBarang(nama, merk, harga);
                 Toast.makeText(this, "Berhasil ditambah", Toast.LENGTH_LONG).show();
                 finish();
             }
