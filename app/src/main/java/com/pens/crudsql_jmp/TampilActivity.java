@@ -34,45 +34,39 @@ public class TampilActivity extends AppCompatActivity {
         dbSource.open();
         values = dbSource.getAllBarang();
 
-        ArrayAdapter<Barang> adapter = new ArrayAdapter<Barang>(this,
+        ArrayAdapter<Barang> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, values);
 
         listView.setAdapter(adapter);
 
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Barang b = (Barang) adapterView.getAdapter().getItem(i);
+        listView.setOnItemClickListener((adapterView, view, i, l) -> {
+            Barang b = (Barang) adapterView.getAdapter().getItem(i);
 
-                Barang edit = dbSource.getBarang(b.getId());
+            Barang edit = dbSource.getBarang(b.getId());
 
-                Intent intent = new Intent(TampilActivity.this, UbahActivity.class);
-                Bundle bun = new Bundle();
+            Intent intent = new Intent(TampilActivity.this, UbahActivity.class);
+            Bundle bun = new Bundle();
 
-                bun.putLong("id", edit.getId());
-                bun.putString("nama", edit.getNama());
-                bun.putString("harga", edit.getHarga());
-                bun.putString("merk", edit.getMerk());
-                intent.putExtras(bun);
+            bun.putLong("id", edit.getId());
+            bun.putString("nama", edit.getNama());
+            bun.putString("harga", edit.getHarga());
+            bun.putString("merk", edit.getMerk());
+            intent.putExtras(bun);
 
-                startActivity(intent);
+            startActivity(intent);
 
-                TampilActivity.this.finish();
-            }
+            TampilActivity.this.finish();
         });
 
 
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+        listView.setOnItemLongClickListener((adapterView, view, i, l) -> {
 
-                Barang b = (Barang) adapterView.getAdapter().getItem(i);
-                dbSource.deleteBarang(b.getId());
-                finish();
-                startActivity(getIntent());
-                return true;
-            }
+            Barang b = (Barang) adapterView.getAdapter().getItem(i);
+            dbSource.deleteBarang(b.getId());
+            finish();
+            startActivity(getIntent());
+            return true;
         });
 
     }

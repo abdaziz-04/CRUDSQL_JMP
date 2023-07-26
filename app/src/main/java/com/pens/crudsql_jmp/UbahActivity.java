@@ -50,20 +50,9 @@ public class UbahActivity extends AppCompatActivity {
         dbSource = new DBSource(this);
         dbSource.open();
 
-        btnSubmit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        btnSubmit.setOnClickListener(view -> updateData());
 
-                updateData();
-            }
-        });
-
-        btnCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                UbahActivity.this.finish();
-            }
-        });
+        btnCancel.setOnClickListener(view -> UbahActivity.this.finish());
     }
 
     private void updateData() {
