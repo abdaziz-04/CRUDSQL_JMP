@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnTambah = findViewById(R.id.btnTambah);
         btnTampil = findViewById(R.id.btnTampil);
+
         btnTambah.setOnClickListener(view -> {
             Intent i = new Intent(MainActivity.this, TambahActivity.class);
             startActivity(i);
